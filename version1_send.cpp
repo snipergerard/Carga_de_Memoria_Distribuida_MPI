@@ -142,11 +142,11 @@ int main(int argc, char* argv[]) {
             printf("5. Cuadrado de arreglo A\n");
             printf("0. Salir\n");
             printf("Seleccione una opcion: ");
-            fflush(stdout); // PARCHE: Obliga a imprimir el menú inmediatamente
+            fflush(stdout); // PARCHE: Obliga a imprimir el menÃº inmediatamente
             scanf("%d", &opcion_menu);
         }
 
-        // Se transmite la opcion seleccionada a todos los nodos del clúster
+        // Se transmite la opcion seleccionada a todos los nodos del clÃºster
         MPI_Bcast(&opcion_menu, 1, MPI_INT, 0, MPI_COMM_WORLD);
         double tiempo_inicio = MPI_Wtime();
 
