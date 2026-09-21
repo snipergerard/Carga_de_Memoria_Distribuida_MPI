@@ -142,7 +142,7 @@ int main(int argc, char* argv[]) {
             printf("5. Cuadrado de arreglo A\n");
             printf("0. Salir\n");
             printf("Seleccione una opcion: ");
-            fflush(stdout); // PARCHE: Obliga a imprimir el menú inmediatamente
+            fflush(stdout); // PARCHE: Obliga a imprimir el menÃº inmediatamente
             scanf("%d", &opcion_menu);
         }
 
@@ -164,7 +164,7 @@ int main(int argc, char* argv[]) {
                     MPI_Scatter(B, size_local, MPI_INT, sub_B, size_local, MPI_INT, 0, MPI_COMM_WORLD);
                 }
 
-                // Ejecución local con OpenMP
+                // EjecuciÃ³n local con OpenMP
                 if (opcion_menu == 2) OperacionesArreglos::sumar(sub_A, sub_B, sub_C, size_local, nombre_equipo, rank_mpi, imprimir_detalles, offset_global);
                 else if (opcion_menu == 3) OperacionesArreglos::restar(sub_A, sub_B, sub_C, size_local, nombre_equipo, rank_mpi, imprimir_detalles, offset_global);
                 else if (opcion_menu == 4) OperacionesArreglos::multiplicar(sub_A, sub_B, sub_C, size_local, nombre_equipo, rank_mpi, imprimir_detalles, offset_global);
